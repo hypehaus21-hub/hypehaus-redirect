@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
+import DeleteAccount from './pages/DeleteAccount'
 
-function App() {
+function RedirectPage() {
   const [showFallback, setShowFallback] = useState(false)
   const [deepLink, setDeepLink] = useState('')
 
@@ -59,7 +61,7 @@ function App() {
   }
 
   if (showFallback) {
-    return (
+  return (
       <div className="container">
         <h2>HypeHaus</h2>
         <p>Don't have the app?</p>
@@ -74,6 +76,9 @@ function App() {
         >
           Try Again
         </a>
+        <div className="footer-links">
+          <a href="/delete-account" className="delete-account-link">Delete Account</a>
+        </div>
       </div>
     )
   }
@@ -89,6 +94,17 @@ function App() {
         </a>
       </p>
     </div>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/delete-account" element={<DeleteAccount />} />
+        <Route path="*" element={<RedirectPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

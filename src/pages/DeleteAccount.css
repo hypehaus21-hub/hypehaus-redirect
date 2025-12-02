@@ -1,0 +1,111 @@
+.delete-account-container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.delete-account-content {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.delete-account-content h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.delete-account-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.delete-account-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.info-section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.info-section li {
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.info-section strong {
+  color: white;
+  font-weight: 600;
+}
+
+.email-link {
+  font-size: 1.125rem;
+  margin: 1rem 0;
+}
+
+.email-link a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.email-link a:hover {
+  opacity: 0.8;
+}
+
+.back-link {
+  margin-top: 2.5rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.back-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.back-link a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .delete-account-content {
+    padding: 1.5rem;
+  }
+
+  .delete-account-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .delete-account-content h2 {
+    font-size: 1.25rem;
+  }
+}
+

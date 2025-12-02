@@ -49,3 +49,21 @@
 .try-again-button:hover {
   opacity: 0.9;
 }
+
+.footer-links {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.delete-account-link {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+  font-size: 0.875rem;
+  transition: opacity 0.2s;
+}
+
+.delete-account-link:hover {
+  opacity: 0.9;
+}
