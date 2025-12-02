@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './DeleteAccount.css'
 
 function DeleteAccount() {
@@ -83,7 +84,7 @@ function DeleteAccount() {
         </section>
 
         <div className="back-link">
-          <a href="/">← Back to HypeHaus</a>
+          <Link to="/">← Back to HypeHaus</Link>
         </div>
       </div>
     </div>

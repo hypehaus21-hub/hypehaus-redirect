@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom'
 import './App.css'
 import DeleteAccount from './pages/DeleteAccount'
 
 function RedirectPage() {
   const [showFallback, setShowFallback] = useState(false)
   const [deepLink, setDeepLink] = useState('')
+  const location = useLocation()
 
   useEffect(() => {
+    // Don't redirect if we're on delete-account page
+    if (location.pathname === '/delete-account') {
+      return
+    }
+
     const params = new URLSearchParams(window.location.search)
     const screen = params.get('screen') || 'home'
     const id = params.get('id')
@@ -52,7 +58,7 @@ function RedirectPage() {
     }, 2000)
     
     return () => clearTimeout(timeout)
-  }, [])
+  }, [location.pathname])
 
   const handleTryAgain = () => {
     if (deepLink) {
@@ -77,7 +83,7 @@ function RedirectPage() {
           Try Again
         </a>
         <div className="footer-links">
-          <a href="/delete-account" className="delete-account-link">Delete Account</a>
+          <Link to="/delete-account" className="delete-account-link">Delete Account</Link>
         </div>
       </div>
     )
