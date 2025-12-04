@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route, useLocation, Link } from 'react-router-dom'
 import './App.css'
 import DeleteAccount from './pages/DeleteAccount'
+import Terms from './pages/Terms'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function RedirectPage() {
   const [showFallback, setShowFallback] = useState(false)
@@ -9,8 +11,10 @@ function RedirectPage() {
   const location = useLocation()
 
   useEffect(() => {
-    // Don't redirect if we're on delete-account page
-    if (location.pathname === '/delete-account') {
+    // Don't redirect if we're on these pages
+    if (location.pathname === '/delete-account' || 
+        location.pathname === '/terms' || 
+        location.pathname === '/privacy-policy') {
       return
     }
 
@@ -83,7 +87,11 @@ function RedirectPage() {
           Try Again
         </a>
         <div className="footer-links">
-          <Link to="/delete-account" className="delete-account-link">Delete Account</Link>
+          <Link to="/delete-account" className="footer-link">Delete Account</Link>
+          <span className="footer-separator">•</span>
+          <Link to="/terms" className="footer-link">Terms & Conditions</Link>
+          <span className="footer-separator">•</span>
+          <Link to="/privacy-policy" className="footer-link">Privacy Policy</Link>
         </div>
       </div>
     )
@@ -108,6 +116,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/delete-account" element={<DeleteAccount />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<RedirectPage />} />
       </Routes>
     </BrowserRouter>

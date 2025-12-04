@@ -1,4 +1,4 @@
-.delete-account-container {
+.legal-container {
   min-height: 100vh;
   padding: 2rem 1rem;
   display: flex;
@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.delete-account-content {
+.legal-content {
   max-width: 800px;
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -16,21 +16,21 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.delete-account-content h1 {
+.legal-content h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
   color: white;
 }
 
-.delete-account-content h2 {
+.legal-content h2 {
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: white;
 }
 
-.delete-account-content h2:first-of-type {
+.legal-content h2:first-of-type {
   margin-top: 0;
 }
 
@@ -96,21 +96,16 @@
 }
 
 @media (max-width: 768px) {
-  .delete-account-content {
+  .legal-content {
     padding: 1.5rem;
   }
 
-  .delete-account-content h1 {
+  .legal-content h1 {
     font-size: 1.75rem;
   }
 
-  .delete-account-content h2 {
+  .legal-content h2 {
     font-size: 1.25rem;
   }
 }
-
-
-
-
-
 
